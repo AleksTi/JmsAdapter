@@ -1,18 +1,19 @@
-package ru.yandex.sashanc.jmsadapter;
+package ru.yandex.sashanc.jmsadapter.jms;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 
 import javax.jms.*;
 
-public class Receiver {
+public class JmsReceiver {
     private ConnectionFactory factory = null;
     private Connection connection = null;
     private Session session = null;
     private Destination destination = null;
     private MessageConsumer consumer = null;
 
-    public Receiver(){
-        factory = new ActiveMQConnectionFactory(ActiveMQConnectionFactory.DEFAULT_BROKER_URL);
+    public JmsReceiver(MessageListener listener){
+        factory = new ActiveMQConnectionFactory(
+                ActiveMQConnectionFactory.DEFAULT_BROKER_URL);
         try {
             connection = factory.createConnection();
             connection.setClientID("receiver");
@@ -27,7 +28,8 @@ public class Receiver {
     public void receiveMessage() throws JMSException {
         connection.start();
         TextMessage message = (TextMessage) consumer.receive();
-        System.out.println(message);
+        System.out.println("========================================================");
+        System.out.println(message.getText());
         connection.close();
     }
 }
