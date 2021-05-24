@@ -18,10 +18,11 @@ public class Sender {
         factory = new ActiveMQConnectionFactory(ActiveMQConnectionFactory.DEFAULT_BROKER_URL);
         try {
             connection = factory.createConnection();
-            connection.setClientID("sender");
+            connection.setClientID("clientSender");
             session = connection.createSession(false, session.AUTO_ACKNOWLEDGE);
             destination = session.createQueue("myQueue");
             producer = session.createProducer(destination);
+            connection.start();
         } catch (JMSException e) {
             logger.info("context", e);
         }
@@ -29,10 +30,8 @@ public class Sender {
 
     public void sendMessage(String message) throws JMSException {
         logger.info("Sender:sendMessage(String message) is launched...");
-        connection.start();
         TextMessage textMessage = session.createTextMessage();
         textMessage.setText(message);
         producer.send(textMessage);
-        connection.close();
     }
 }

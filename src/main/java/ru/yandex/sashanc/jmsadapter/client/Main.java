@@ -11,11 +11,15 @@ public class Main {
     public static void main(String[] args) {
         logger.info("Main:main() is launched...");
         Sender sender = new Sender();
+        Receiver receiver = new Receiver();
         try {
             Scanner scanner = new Scanner(System.in);
-            String message = scanner.nextLine();
-            sender.sendMessage(message);
-            scanner.nextLine();
+            String message;
+            while ((message = scanner.nextLine()) != null) {
+                sender.sendMessage(message);
+                String answer = receiver.receiveMessage();
+                logger.info("Получен ответ: " + answer);
+            }
         } catch (JMSException e) {
             logger.info("context", e);
         }

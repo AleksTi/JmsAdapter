@@ -21,8 +21,9 @@ public class JmsSender {
             connection = factory.createConnection();
             connection.setClientID("sender");
             session = connection.createSession(false, session.AUTO_ACKNOWLEDGE);
-            destination = session.createQueue("myQueue");
+            destination = session.createQueue("myQueueResponse");
             producer = session.createProducer(destination);
+            connection.start();
         } catch (JMSException e) {
             e.printStackTrace();
         }
@@ -30,11 +31,11 @@ public class JmsSender {
 
     public void sendMessage(String message) throws JMSException {
         logger.info("Sender:sendMessage(String message) is launched...");
-        connection.start();
+
         TextMessage textMessage = session.createTextMessage();
         textMessage.setText(message);
         producer.send(textMessage);
-        connection.close();
+//        connection.close();
     }
 
 }

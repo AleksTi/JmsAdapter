@@ -1,10 +1,14 @@
 package ru.yandex.sashanc.jmsadapter.jms;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
+import org.apache.log4j.Logger;
+import ru.yandex.sashanc.jmsadapter.Main2;
 
 import javax.jms.*;
 
 public class JmsReceiver {
+    private static final Logger logger = Logger.getLogger(Main2.class);
+
     private ConnectionFactory factory = null;
     private Connection connection = null;
     private Session session = null;
@@ -20,16 +24,21 @@ public class JmsReceiver {
             session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
             destination = session.createQueue("myQueue");
             consumer = session.createConsumer(destination);
-        } catch (JMSException e) {
-            e.printStackTrace();
+            consumer.setMessageListener(listener);
+            connection.start();
+            while (true){
+                Thread.sleep(1000);
+            }
+        } catch (JMSException | InterruptedException e) {
+            logger.info("context", e);
         }
     }
 
-    public void receiveMessage() throws JMSException {
-        connection.start();
-        TextMessage message = (TextMessage) consumer.receive();
-        System.out.println("========================================================");
-        System.out.println(message.getText());
-        connection.close();
-    }
+//    public void receiveMessage() throws JMSException {
+//        connection.start();
+//        TextMessage message = (TextMessage) consumer.receive();
+//        logger.info("========================================================");
+//        logger.info(message.getText());
+//        connection.close();
+//    }
 }

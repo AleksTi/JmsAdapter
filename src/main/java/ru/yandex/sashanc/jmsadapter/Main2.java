@@ -1,6 +1,8 @@
 package ru.yandex.sashanc.jmsadapter;
 
 import org.apache.log4j.Logger;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ru.yandex.sashanc.jmsadapter.jms.JmsListener;
 import ru.yandex.sashanc.jmsadapter.jms.JmsReceiver;
 
@@ -13,14 +15,15 @@ public class Main2 {
     public static void main(String[] args) {
         logger.info("Main2:main() is launched...");
 
-        JmsReceiver receiver = new JmsReceiver(new JmsListener());
-        try {
+        ApplicationContext appContext = new ClassPathXmlApplicationContext(new String[]{"appContext.xml"});
+        JmsReceiver receiver = (JmsReceiver) appContext.getBean("receiver");
+//        try {
             Scanner scanner = new Scanner(System.in);
             scanner.nextLine();
-            receiver.receiveMessage();
+//            receiver.receiveMessage();
             scanner.nextLine();
-        } catch (JMSException e) {
-            e.printStackTrace();
-        }
+//        } catch (JMSException e) {
+//            logger.info("context", e);
+//        }
     }
 }
