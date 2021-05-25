@@ -10,16 +10,23 @@ public class Main {
 
     public static void main(String[] args) {
         logger.info("Main:main() is launched...");
+
         Sender sender = new Sender();
-        Receiver receiver = new Receiver();
+        Listener listener = new Listener();
+        Receiver receiver = new Receiver(listener);
+        Service service = new Service();
         try {
-            Scanner scanner = new Scanner(System.in);
-            String message;
-            while ((message = scanner.nextLine()) != null) {
-                sender.sendMessage(message);
-                String answer = receiver.receiveMessage();
-                logger.info("Получен ответ: " + answer);
-            }
+            sender.sendMessage(service.checkConnection());
+            sender.sendMessage(service.sendXMLFile("E:\\Work\\test.xsd"));
+            sender.sendMessage(service.getXMLFile("E:\\Work\\test.xsd"));
+
+//            Scanner scanner = new Scanner(System.in);
+//            String message;
+//            while ((message = scanner.nextLine()) != null) {
+//                sender.sendMessage(message);
+//                String answer = receiver.receiveMessage();
+//                logger.info("Получен ответ: " + answer);
+//            }
         } catch (JMSException e) {
             logger.info("context", e);
         }

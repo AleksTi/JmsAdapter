@@ -15,7 +15,7 @@ public class Receiver {
     private Destination destination = null;
     private MessageConsumer consumer = null;
 
-    public Receiver() {
+    public Receiver(MessageListener listener) {
         factory = new ActiveMQConnectionFactory(
                 ActiveMQConnection.DEFAULT_BROKER_URL);
         try {
@@ -24,6 +24,7 @@ public class Receiver {
             session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
             destination = session.createQueue("myQueueResponse");
             consumer = session.createConsumer(destination);
+            consumer.setMessageListener(listener);
             connection.start();
         } catch (JMSException e) {
             logger.info("context", e);

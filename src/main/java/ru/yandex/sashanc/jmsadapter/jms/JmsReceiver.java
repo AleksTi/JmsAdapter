@@ -26,10 +26,7 @@ public class JmsReceiver {
             consumer = session.createConsumer(destination);
             consumer.setMessageListener(listener);
             connection.start();
-            while (true){
-                Thread.sleep(1000);
-            }
-        } catch (JMSException | InterruptedException e) {
+        } catch (JMSException e) {
             logger.info("context", e);
         }
     }
@@ -37,7 +34,6 @@ public class JmsReceiver {
 //    public void receiveMessage() throws JMSException {
 //        connection.start();
 //        TextMessage message = (TextMessage) consumer.receive();
-//        logger.info("========================================================");
 //        logger.info(message.getText());
 //        connection.close();
 //    }

@@ -30,8 +30,7 @@ public class JmsSender {
     }
 
     public void sendMessage(String message) throws JMSException {
-        logger.info("Sender:sendMessage(String message) is launched...");
-
+        logger.info("JmsSender:sendMessage(String message) is launched...");
         TextMessage textMessage = session.createTextMessage();
         textMessage.setText(message);
         producer.send(textMessage);

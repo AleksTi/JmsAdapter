@@ -2,6 +2,7 @@ package ru.yandex.sashanc.jmsadapter.client;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.log4j.Logger;
+import ru.yandex.sashanc.jmsadapter.dao.FilesDaoImpl;
 
 import javax.jms.*;
 
@@ -34,4 +35,12 @@ public class Sender {
         textMessage.setText(message);
         producer.send(textMessage);
     }
+
+//    public void sendMessage(RequestDTO message) throws JMSException {
+//        logger.info("Sender:sendMessage(String message) is launched...");
+//        TextMessage textMessage = session.createTextMessage();
+//        textMessage.setText(message);
+//        producer.send(textMessage);
+//    }
 }
+
