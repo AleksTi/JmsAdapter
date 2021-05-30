@@ -2,21 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9ebbac3-dbdf-436c-bb2f-e55f667487b1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Listener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/dto/RequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/jms/ISender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/model/Envelope.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/service/XmlHandlerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/yandex/sashanc/jmsadapter/Main2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/yandex/sashanc/jmsadapter/Main2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Receiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Receiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Sender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Service.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/dao/FilesDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/dao/FilesDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/dao/IFilesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/dao/IFilesDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/dto/RequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/dto/RequestDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/jms/JmsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/jms/JmsListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/jms/JmsReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/jms/JmsReceiver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/jms/JmsSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/jms/JmsSender.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -39,8 +37,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+            <state relative-caret-position="301">
+              <caret line="21" column="77" lean-forward="true" selection-start-line="21" selection-start-column="77" selection-end-line="21" selection-end-column="77" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,34 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Service.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Service.java">
+      <file leaf-file-name="Sender.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Sender.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#executeRequest#0;class#Service#0" />
-                <element signature="method#sendXMLFile#0;class#Service#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RequestDTO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/dto/RequestDTO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JmsReceiver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/jms/JmsReceiver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+            <state relative-caret-position="300">
+              <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,32 +61,11 @@
       <file leaf-file-name="Main2.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/Main2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+            <state relative-caret-position="231">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FilesDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/dao/FilesDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="appContext.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/appContext.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="68" selection-start-line="6" selection-start-column="68" selection-end-line="6" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -119,8 +73,8 @@
       <file leaf-file-name="JmsListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/jms/JmsListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+            <state relative-caret-position="567">
+              <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,14 +82,75 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sender.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Sender.java">
+      <file leaf-file-name="Service.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Service.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+            <state relative-caret-position="170">
+              <caret line="31" column="74" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#executeRequest#0;class#Service#0" />
+                <element signature="docComment;method#getStringXML#0;class#Service#0" />
+                <element signature="method#getStringXML#0;class#Service#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FilesDaoImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/dao/FilesDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#saveFileToDir#0;class#FilesDaoImpl#0" />
+                <element signature="method#getXmlDocFromXmlFile#0;class#FilesDaoImpl#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XmlHandlerService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/service/XmlHandlerService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-33">
+              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#stringToXmlDoc#0;class#XmlHandlerService#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JmsSender.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/jms/JmsSender.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="36" column="29" lean-forward="true" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#JmsSender#0;class#JmsSender#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ISender.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/jms/ISender.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Envelope.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/model/Envelope.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -146,8 +161,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -337,9 +352,9 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4865379918738" />
+        <entry key="$PROJECT_DIR$" value="4865769640801" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="642099307" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="481787989" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="2867556929" />
       </map>
     </option>
@@ -556,19 +571,22 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/jms/Receiver.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/Main2.java" />
         <option value="$PROJECT_DIR$/src/main/resources/appContext.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/dao/IFilesDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Request.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/RequestDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/jms/JmsListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/jms/JmsSender.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Listener.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Receiver.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/jms/JmsReceiver.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Sender.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/dao/FilesDaoImpl.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Envelope.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/dto/RequestDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Service.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/jms/JmsListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/dao/IFilesDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/dao/FilesDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/service/XmlHandlerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/jms/JmsSender.java" />
       </list>
     </option>
   </component>
@@ -663,6 +681,24 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="jmsadapter" type="462c0819:PsiDirectoryNode" />
               <item name="jms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JmsAdapter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JmsAdapter" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jmsadapter" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JmsAdapter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JmsAdapter" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jmsadapter" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="JmsAdapter" type="b2602c69:ProjectViewProjectNode" />
@@ -792,7 +828,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1621703411132</updated>
-      <workItem from="1621703415435" duration="46489000" />
+      <workItem from="1621703415435" duration="75185000" />
     </task>
     <task id="LOCAL-00001" summary="Реализована односторонняя передача текстового сообщения ActiveMQ">
       <created>1621878135667</created>
@@ -808,15 +844,21 @@
       <option name="project" value="LOCAL" />
       <updated>1621884914157</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Реализована отправка объектов и ответ от сервера">
+      <created>1621983540892</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1621983540892</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46489000" />
+    <option name="totallyTimeSpent" value="75185000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1170" extended-state="7" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1170" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -831,15 +873,15 @@
       <window_info id="UI Designer" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5769613" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" weight="0.24826217" />
+      <window_info anchor="bottom" id="Messages" weight="0.19165839" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info id="Image Layers" />
       <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21549156" />
-      <window_info anchor="bottom" id="Version Control" weight="0.23535253" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22542204" />
+      <window_info anchor="bottom" id="Version Control" weight="0.25024825" />
       <window_info anchor="bottom" id="Spring" />
       <window_info anchor="bottom" id="Terminal" weight="0.32969216" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21804512" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21804512" />
       <window_info anchor="bottom" id="SonarLint" weight="0.32174778" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969216" />
       <window_info anchor="right" id="Gradle" />
@@ -855,7 +897,7 @@
       <window_info anchor="bottom" id="Build" order="0" weight="0.3366435" />
       <window_info id="Designer" order="0" />
       <window_info anchor="right" id="Palette" order="0" />
-      <window_info active="true" anchor="bottom" id="Run" order="10" visible="true" weight="0.4021847" />
+      <window_info anchor="bottom" id="Run" order="10" visible="true" weight="0.22144985" />
       <window_info anchor="bottom" id="Spring" order="1" />
       <window_info id="Image Layers" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
@@ -872,10 +914,10 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.32969216" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.23535253" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.25024825" />
       <window_info anchor="right" id="Maven Projects" order="2" />
       <window_info anchor="right" id="Gradle" order="3" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.21804512" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.21804512" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="TODO" order="14" />
@@ -931,11 +973,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Реализована односторонняя передача текстового сообщения ActiveMQ" />
     <MESSAGE value="Реализован ответ от сервера при получении сообщения" />
-    <option name="LAST_COMMIT_MESSAGE" value="Реализован ответ от сервера при получении сообщения" />
+    <MESSAGE value="Реализована отправка объектов и ответ от сервера" />
+    <option name="LAST_COMMIT_MESSAGE" value="Реализована отправка объектов и ответ от сервера" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -981,91 +1024,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/dao/IFilesDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/jms/JmsSender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/appContext.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="6" column="68" selection-start-line="6" selection-start-column="68" selection-end-line="6" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/jms/JmsListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Listener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Receiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-94">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/dao/FilesDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/Main2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/dto/RequestDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1079,10 +1041,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="50" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Listener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/dto/RequestDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="method#RequestDTO#0;class#RequestDTO#0" />
+            <element signature="method#RequestDTO#1;class#RequestDTO#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Receiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-21">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Sender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/jms/JmsListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        <state relative-caret-position="301">
+          <caret line="21" column="77" lean-forward="true" selection-start-line="21" selection-start-column="77" selection-end-line="21" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/Main2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1091,22 +1121,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Service.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="170">
+          <caret line="31" column="74" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#executeRequest#0;class#Service#0" />
-            <element signature="method#sendXMLFile#0;class#Service#0" />
+            <element signature="docComment;method#getStringXML#0;class#Service#0" />
+            <element signature="method#getStringXML#0;class#Service#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/client/Sender.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/dao/IFilesDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        <state relative-caret-position="168">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/model/Envelope.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/jms/ISender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/jms/JmsSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="36" column="29" lean-forward="true" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#JmsSender#0;class#JmsSender#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/service/XmlHandlerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33">
+          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#stringToXmlDoc#0;class#XmlHandlerService#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yandex/sashanc/jmsadapter/dao/FilesDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#saveFileToDir#0;class#FilesDaoImpl#0" />
+            <element signature="method#getXmlDocFromXmlFile#0;class#FilesDaoImpl#0" />
           </folding>
         </state>
       </provider>

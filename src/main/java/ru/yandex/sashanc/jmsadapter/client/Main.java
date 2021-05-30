@@ -17,8 +17,10 @@ public class Main {
         Service service = new Service();
         try {
             sender.sendMessage(service.checkConnection());
-            sender.sendMessage(service.sendXMLFile("E:\\Work\\test.xsd"));
-            sender.sendMessage(service.getXMLFile("E:\\Work\\test.xsd"));
+//            sender.sendMessage(service.sendXMLFile("E:\\Work\\test.xsd"));
+//            sender.sendMessage(service.getXMLFile("E:\\Work\\test.xsd"));
+            sender.sendMessage(service.saveXmlFile("E:\\Work\\Envelope.xml", "E:\\Work"));
+            sender.sendMessage(service.getXmlFile("E:\\Work\\Envelope.xml"));
 
 //            Scanner scanner = new Scanner(System.in);
 //            String message;

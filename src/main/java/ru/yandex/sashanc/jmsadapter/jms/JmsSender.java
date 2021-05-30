@@ -9,7 +9,7 @@ import javax.jms.*;
 public class JmsSender {
     private static final Logger logger = Logger.getLogger(Main2.class);
 
-    private ConnectionFactory factory = null;
+    private ConnectionFactory factory;
     private Connection connection = null;
     private Session session = null;
     private Destination destination = null;

@@ -5,6 +5,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import ru.yandex.sashanc.jmsadapter.Main2;
 import ru.yandex.sashanc.jmsadapter.dto.RequestDTO;
+import ru.yandex.sashanc.jmsadapter.service.XmlHandlerService;
 
 import javax.jms.JMSException;
 import javax.jms.Message;
@@ -15,19 +16,16 @@ public class JmsListener implements MessageListener {
     private static final Logger logger = Logger.getLogger(Main2.class);
 
     @Autowired
-    private JmsSender sender;
+    private XmlHandlerService xmlHandlerService;
 
     @Override
     public void onMessage(Message message) {
         TextMessage msg = (TextMessage) message;
+        Gson gson = new Gson();
+        RequestDTO request;
         try {
-            Gson gson = new Gson();
-            RequestDTO request = gson.fromJson(msg.getText(), RequestDTO.class);
-            logger.info("Following message is received: id = " + request.getId());
-            logger.info("Following message is received: command = " + request.getCommand());
-            logger.info("Following message is received: xmlDocument = " + request.getXmlDocument());
-//            logger.info("Following message is received: " + msg.getText());
-            sender.sendMessage("Message is received by JmsServer: id = " + request.getId());
+            request = gson.fromJson(msg.getText(), RequestDTO.class);
+            xmlHandlerService.requestHandler(request);
         } catch (JMSException e) {
             logger.info("context", e);
         }
